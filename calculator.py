@@ -1,35 +1,55 @@
 # calculator
 
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))
-user = input("Enter Operation (+,-,*,/): ")
+def add(x, y):
+    return x + y
 
-#Calculating the operation.
+def sub(x, y):
+    return x - y
 
-#Addition.
-if user == "+":
-    result = num1 + num2
-    print("The sum is", result)
+def mul(x, y):
+    return x * y
 
-#Substraction.
-elif user == "-":
-    result = num1 - num2
-    print("The difference is", result)
-
-#Multiplication.
-elif user == "*":
-    result = num1 * num2
-    print("The product is", result)
-
-#Division
-elif user =="/":
-    #Check that the second number input is not divisible by 0.
-    if num2 != 0:
-        result = num1 / num2
-        print("The product is", result)
-
+def div(x, y):
+    if y !=0:
+        return x / y
+    
     else:
-        print("Error: num1 is not divisible by 0")
+        return "Error the it is not divisible by 0."
+    
+while True:
 
-else:
-    print("Invalid entry.")
+
+
+    num1 = float(input("Enter first number: "))
+    num2 = float(input("Enter second number: "))
+    user = input("Enter Operation (+,-,*,/): ")
+
+    #Calculating the operation.
+
+    #Addition.
+    if user == "+":
+        result = num1 + num2
+        print("The sum is", result)
+
+    #Substraction.
+    elif user == "-":
+        result = num1 - num2
+        print("The difference is", result)
+    
+    #Multiplication.
+    elif user == "*":
+        result = num1 * num2
+        print("The product is", result)
+    
+    #Division
+    elif user =="/":
+        #Check that the second number input is not divisible by 0.
+        if num2 != 0:
+            result = num1 / num2
+            print("The product is", result)
+    
+        else:
+            print("Error: num1 is not divisible by 0")
+    
+    else:
+        print("Invalid entry.")
